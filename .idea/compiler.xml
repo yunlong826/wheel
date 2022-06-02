@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wheel-remote" />
+        <module name="wheel-hessian" />
+        <module name="wheel-registry-api" />
+        <module name="wheel-demo" />
+        <module name="rpc-serialization" />
+        <module name="wheel-config-spring" />
+        <module name="wheel-registry-zookeeper" />
+        <module name="wheel-json" />
+        <module name="wheel-registry-common" />
+        <module name="wheel-demo-xml-consumer" />
+        <module name="wheel-config-common" />
+        <module name="wheel-config" />
+        <module name="wheel-invoker" />
+        <module name="wheel-serialization-factory" />
+        <module name="wheel-demo-interface" />
+        <module name="rpc-core" />
+        <module name="wheel-registry" />
+        <module name="wheel-registry-factory" />
+        <module name="wheel-common" />
+        <module name="wheel-demo-xml-provider" />
+        <module name="wheel-serialization-api" />
+        <module name="wheel-rpc" />
+        <module name="wheel-remote-netty" />
+        <module name="wheel-demo-xml" />
+        <module name="wheel-cluster" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rpc-core" target="1.8" />
+      <module name="rpc-serialization" target="1.8" />
+      <module name="wheel-cluster" target="1.8" />
+      <module name="wheel-common" target="1.8" />
+      <module name="wheel-config" target="1.8" />
+      <module name="wheel-config-common" target="1.8" />
+      <module name="wheel-config-spring" target="1.8" />
+      <module name="wheel-demo" target="1.8" />
+      <module name="wheel-demo-interface" target="1.8" />
+      <module name="wheel-demo-xml" target="1.8" />
+      <module name="wheel-demo-xml-consumer" target="1.8" />
+      <module name="wheel-demo-xml-provider" target="1.8" />
+      <module name="wheel-hessian" target="1.8" />
+      <module name="wheel-invoker" target="1.8" />
+      <module name="wheel-json" target="1.8" />
+      <module name="wheel-netty" target="1.8" />
+      <module name="wheel-registry" target="1.8" />
+      <module name="wheel-registry-api" target="1.8" />
+      <module name="wheel-registry-common" target="1.8" />
+      <module name="wheel-registry-factory" target="1.8" />
+      <module name="wheel-registry-zookeeper" target="1.8" />
+      <module name="wheel-remote" target="1.8" />
+      <module name="wheel-remote-netty" target="1.8" />
+      <module name="wheel-rpc" target="1.8" />
+      <module name="wheel-serialization-api" target="1.8" />
+      <module name="wheel-serialization-factory" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

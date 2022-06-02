@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/rpc-serialization/wheel-hessian/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-serialization/wheel-hessian/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-serialization/wheel-json/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-serialization/wheel-json/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-serialization/wheel-serialization-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-serialization/wheel-serialization-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-serialization/wheel-serialization-factory/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-serialization/wheel-serialization-factory/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-cluster/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-cluster/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-config-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-config-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-config/wheel-config-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-config/wheel-config-spring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-demo/wheel-demo-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-demo/wheel-demo-interface/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-invoker/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-invoker/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-registry/wheel-registry-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-registry/wheel-registry-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-registry/wheel-registry-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-registry/wheel-registry-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-registry/wheel-registry-factory/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-registry/wheel-registry-factory/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-registry/wheel-registry-zookeeper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-registry/wheel-registry-zookeeper/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-remote/wheel-remote-netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-remote/wheel-remote-netty/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-rpc/rpc-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wheel-rpc/rpc-core/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

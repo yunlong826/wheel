@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/wheel-rpc/rpc-core/rpc-core.iml" filepath="$PROJECT_DIR$/wheel-rpc/rpc-core/rpc-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc-serialization/rpc-serialization.iml" filepath="$PROJECT_DIR$/rpc-serialization/rpc-serialization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wheel.iml" filepath="$PROJECT_DIR$/.idea/wheel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-cluster/wheel-cluster.iml" filepath="$PROJECT_DIR$/wheel-cluster/wheel-cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-common/wheel-common.iml" filepath="$PROJECT_DIR$/wheel-common/wheel-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-config/wheel-config.iml" filepath="$PROJECT_DIR$/wheel-config/wheel-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-config-common/wheel-config-common.iml" filepath="$PROJECT_DIR$/wheel-config-common/wheel-config-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-config/wheel-config-spring/wheel-config-spring.iml" filepath="$PROJECT_DIR$/wheel-config/wheel-config-spring/wheel-config-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-demo/wheel-demo.iml" filepath="$PROJECT_DIR$/wheel-demo/wheel-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-demo/wheel-demo-interface/wheel-demo-interface.iml" filepath="$PROJECT_DIR$/wheel-demo/wheel-demo-interface/wheel-demo-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml.iml" filepath="$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-consumer/wheel-demo-xml-consumer.iml" filepath="$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-consumer/wheel-demo-xml-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-provider/wheel-demo-xml-provider.iml" filepath="$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-provider/wheel-demo-xml-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc-serialization/wheel-hessian/wheel-hessian.iml" filepath="$PROJECT_DIR$/rpc-serialization/wheel-hessian/wheel-hessian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-invoker/wheel-invoker.iml" filepath="$PROJECT_DIR$/wheel-invoker/wheel-invoker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc-serialization/wheel-json/wheel-json.iml" filepath="$PROJECT_DIR$/rpc-serialization/wheel-json/wheel-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-registry/wheel-registry.iml" filepath="$PROJECT_DIR$/wheel-registry/wheel-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-registry/wheel-registry-api/wheel-registry-api.iml" filepath="$PROJECT_DIR$/wheel-registry/wheel-registry-api/wheel-registry-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-registry/wheel-registry-common/wheel-registry-common.iml" filepath="$PROJECT_DIR$/wheel-registry/wheel-registry-common/wheel-registry-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-registry/wheel-registry-factory/wheel-registry-factory.iml" filepath="$PROJECT_DIR$/wheel-registry/wheel-registry-factory/wheel-registry-factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-registry/wheel-registry-zookeeper/wheel-registry-zookeeper.iml" filepath="$PROJECT_DIR$/wheel-registry/wheel-registry-zookeeper/wheel-registry-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-remote/wheel-remote.iml" filepath="$PROJECT_DIR$/wheel-remote/wheel-remote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-remote/wheel-remote-netty/wheel-remote-netty.iml" filepath="$PROJECT_DIR$/wheel-remote/wheel-remote-netty/wheel-remote-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel-rpc/wheel-rpc.iml" filepath="$PROJECT_DIR$/wheel-rpc/wheel-rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc-serialization/wheel-serialization-api/wheel-serialization-api.iml" filepath="$PROJECT_DIR$/rpc-serialization/wheel-serialization-api/wheel-serialization-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpc-serialization/wheel-serialization-factory/wheel-serialization-factory.iml" filepath="$PROJECT_DIR$/rpc-serialization/wheel-serialization-factory/wheel-serialization-factory.iml" />
+    </modules>
+  </component>
+</project>
