@@ -13,6 +13,14 @@ import java.util.function.Supplier;
  * @date 2022/5/28 17:59
  */
 public class RegistryConfig implements Serializable {
+
+    public RegistryConfig(){}
+
+    public RegistryConfig(String address){
+        this.address = address;
+        setAddress(address);
+    }
+
     /**
      * Register center address
      */

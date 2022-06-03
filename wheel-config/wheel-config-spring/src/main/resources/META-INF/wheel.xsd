@@ -10,7 +10,7 @@
     </xsd:element>
     <xsd:element name="registry">
         <xsd:complexType>
-            <xsd:attribute name="adress" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="address" type="xsd:string"></xsd:attribute>
         </xsd:complexType>
     </xsd:element>
     <xsd:element name="protocol">

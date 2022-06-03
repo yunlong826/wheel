@@ -4,10 +4,10 @@
        xmlns:yun="http://yunWheel.yun.com/schema/tag"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://yunWheel.yun.com/schema/tag
-        http://yunWheel.yun.com/schema/tag/yun.xsd">
+        http://yunWheel.yun.com/schema/tag/wheel.xsd">
 
     <yun:application name="demo-provider"/>
-    <yun:registry adress="zookeeper://81.68.177.58:2181" />
+    <yun:registry address="zookeeper://81.68.177.58:2181" />
     <yun:protocol protocol="dubbo" port="21"/>
 
     <bean id="demoService" class="com.wheel.ctgu.DemoServiceImpl"/>

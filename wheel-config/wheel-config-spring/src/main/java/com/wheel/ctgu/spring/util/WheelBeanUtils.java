@@ -3,7 +3,9 @@ package com.wheel.ctgu.spring.util;
 
 import com.wheel.ctgu.ApplicationConfig;
 import com.wheel.ctgu.ProtocolConfig;
+import com.wheel.ctgu.ReferenceConfig;
 import com.wheel.ctgu.RegistryConfig;
+import com.wheel.ctgu.spring.ReferenceBean;
 import com.wheel.ctgu.spring.ServiceBean;
 import org.springframework.beans.factory.BeanFactory;
 
@@ -14,6 +16,25 @@ import org.springframework.beans.factory.BeanFactory;
  * @date 2022/5/30 17:01
  */
 public class WheelBeanUtils {
+
+    public static String ADDRESS = "";
+
+    public static Object getRpcApi(BeanFactory beanFactory, String s){
+        if(beanFactory.containsBean(s)){
+            return beanFactory.getBean(s);
+        }
+        return null;
+    }
+
+    public static ReferenceBean getReferenceBean(BeanFactory beanFactory, Class<?> cls){
+        String beanName = cls.getName();
+        if(beanFactory.containsBean(beanName)){
+            return (ReferenceBean) beanFactory.getBean(beanName,cls);
+        }
+        return null;
+    }
+
+
     public static ServiceBean getServiceBean(BeanFactory beanFactory, Class<?> cls){
         String beanName = cls.getName();
         if(beanFactory.containsBean(beanName)){
@@ -39,7 +60,8 @@ public class WheelBeanUtils {
     public static RegistryConfig getRegistryConfig(BeanFactory beanFactory, Class<?> cls){
         String beanName = cls.getName();
         if(beanFactory.containsBean(beanName)){
-            return (RegistryConfig) beanFactory.getBean(beanName,cls);
+            RegistryConfig bean = (RegistryConfig)beanFactory.getBean(beanName, cls);
+            return bean;
         }
         return null;
     }

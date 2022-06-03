@@ -27,16 +27,22 @@ public class ReferenceConfig<T> extends InterfaceConfig implements InvocationHan
 
     private Object proxy;
 
+    private String id;
+
+    private String interfaceName;
+
     private RegistryDirectory registryDirectory;
 
     private FailfastClusterInvoker failfastClusterInvoker;
 
     private InterfaceConfig interfaceConfig;
 
+    public ReferenceConfig(){}
+
     public ReferenceConfig(Class<T> clazz, InterfaceConfig interfaceConfig,RegistryConfig registryConfig) {
         proxy = Proxy.newProxyInstance(this.getClass().getClassLoader(), new Class[]{clazz}, this);
         this.clazzName = clazz.getName();
-        registryDirectory = new RegistryDirectory(clazzName, registryConfig.getAddress()+":"+registryConfig.getPort(),
+        registryDirectory = new RegistryDirectory(clazzName, registryConfig.getHost()+":"+registryConfig.getPort(),
                 interfaceConfig);
         failfastClusterInvoker = new FailfastClusterInvoker(registryDirectory);
         this.interfaceConfig = interfaceConfig;
@@ -94,5 +100,21 @@ public class ReferenceConfig<T> extends InterfaceConfig implements InvocationHan
         if (destroyed.compareAndSet(false, true)) {
             registryDirectory.destroy();
         }
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getInterface() {
+        return interfaceName;
+    }
+
+    public void setInterface(String interfaceName) {
+        this.interfaceName = interfaceName;
     }
 }

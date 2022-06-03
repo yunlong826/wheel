@@ -4,7 +4,6 @@ import com.google.common.collect.Lists;
 import com.wheel.ctgu.api.ChildListener;
 import com.wheel.ctgu.api.RegistryService;
 import com.wheel.ctgu.common.config.InterfaceConfig;
-import com.wheel.ctgu.invoker.WheelInvoker;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
@@ -39,7 +38,7 @@ public class RegistryDirectory implements ChildListener {
         this.interfaceConfig = interfaceConfig;
         this.registryAddress = registry;
         // 监听group/接口名/providers，有变化时通知RegistryDirectory，也就是调用notify(url, listener, urls);
-        this.providerPath = "/miniDubbo/"+interfaceConfig.getGroup()+ path + "/providers";
+        this.providerPath = "/wheel/"+interfaceConfig.getGroup()+ path + "/providers";
 
         // 判断zk/redis。创建zk连接，并创建RegistryDirectory，第一次时创建DubboInvoker
         registryService = RegistryManager.getRegistryService(registryAddress);

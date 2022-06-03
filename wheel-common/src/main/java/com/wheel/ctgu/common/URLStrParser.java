@@ -21,21 +21,28 @@ public class URLStrParser {
      */
 
     public static URL parseDecodedStr(String url) {
-        String protocol = url.substring(0,url.indexOf("//"));
-        if(protocol.equals(ProtocolConstants.ZOOKEEPER)||protocol.equals(ProtocolConstants.REDIS)){
-            url = url.substring(url.indexOf("//")+1);
-            String username = url.substring(0,url.indexOf(":"));
-            url = url.substring(url.indexOf(":")+1);
-            String password = url.substring(0,url.indexOf("@"));
-            url = url.substring(url.indexOf("@")+1);
-            String host = url.substring(0,url.indexOf(":"));
-            url = url.substring(url.indexOf(":")+1);
-            String port = url.substring(0,url.indexOf("/"));
-            String path = url.substring(url.indexOf("/")+1);
-            URL url1 = new URL(protocol,username,password,host,Integer.valueOf(port),path);
+            String protocol = url.substring(0,url.indexOf(":"));
+
+            url = url.substring(url.indexOf("//")+2);
+//            String username = url.substring(0,url.indexOf(":"));
+//            url = url.substring(url.indexOf(":")+1);
+//            String password = url.substring(0,url.indexOf("@"));
+//            url = url.substring(url.indexOf("@")+1);
+//            String host = url.substring(0,url.indexOf(":"));
+//            url = url.substring(url.indexOf(":")+1);
+//            String port = url.substring(0,url.indexOf("/"));
+//            String path = url.substring(url.indexOf("/")+1);
+//            URL url1 = new URL(protocol,username,password,host,Integer.valueOf(port),path);
+        String username = "";
+        String password = "";
+        String host = url.substring(0,url.indexOf(":"));
+        url = url.substring(url.indexOf(":")+1);
+        String port = url.substring(url.indexOf("/")+1);
+        String path = "";
+        URL url1 = new URL(protocol,username,password,host,Integer.valueOf(port),path);
             return url1;
-        } else{
-            throw new ProtocolException(protocol+"is not in wheel");
-        }
+//        } else{
+//            throw new ProtocolException(protocol+"is not in wheel");
+//        }
     }
 }

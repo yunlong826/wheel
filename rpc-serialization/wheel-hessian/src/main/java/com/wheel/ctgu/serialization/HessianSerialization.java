@@ -2,8 +2,8 @@ package com.wheel.ctgu.serialization;
 
 import com.alibaba.com.caucho.hessian.io.HessianSerializerInput;
 import com.alibaba.com.caucho.hessian.io.HessianSerializerOutput;
-import com.sun.xml.internal.ws.encoding.soap.SerializationException;
 import com.wheel.ctgu.api.RpcSerialization;
+import com.wheel.ctgu.api.SerializationException;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

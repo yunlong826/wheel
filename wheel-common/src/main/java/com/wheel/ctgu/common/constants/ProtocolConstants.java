@@ -7,6 +7,5 @@ package com.wheel.ctgu.common.constants;
  * @date 2022/5/29 13:27
  */
 public class ProtocolConstants {
-    public static final String JSON = "json";
-    public static final String HESSIAN = "hessian";
+    public static final String DUBBO = "dubbo";
 }

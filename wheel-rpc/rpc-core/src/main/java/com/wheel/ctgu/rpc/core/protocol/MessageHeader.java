@@ -1,8 +1,9 @@
 package com.wheel.ctgu.rpc.core.protocol;
 
 
-import com.wheel.ctgu.rpc.core.serialization.SerializationTypeEnum;
 
+
+import com.wheel.ctgu.api.SerializationTypeEnum;
 
 import java.io.Serializable;
 import java.util.UUID;

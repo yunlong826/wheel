@@ -17,21 +17,21 @@
         <option value="$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-provider/pom.xml" />
         <option value="$PROJECT_DIR$/wheel-demo/wheel-demo-xml/wheel-demo-xml-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/wheel-demo/wheel-demo-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/wheel-config-common/pom.xml" />
-        <option value="$PROJECT_DIR$/wheel-invoker/pom.xml" />
+        <option value="$PROJECT_DIR$/rpc-serialization/wheel-json/pom.xml" />
         <option value="$PROJECT_DIR$/rpc-serialization/wheel-hessian/pom.xml" />
         <option value="$PROJECT_DIR$/rpc-serialization/wheel-serialization-api/pom.xml" />
-        <option value="$PROJECT_DIR$/rpc-serialization/wheel-json/pom.xml" />
         <option value="$PROJECT_DIR$/rpc-serialization/wheel-serialization-factory/pom.xml" />
-        <option value="$PROJECT_DIR$/wheel-registry/wheel-registry-api/pom.xml" />
-        <option value="$PROJECT_DIR$/wheel-registry/wheel-registry-common/pom.xml" />
-        <option value="$PROJECT_DIR$/wheel-registry/wheel-registry-factory/pom.xml" />
         <option value="$PROJECT_DIR$/wheel-registry/wheel-registry-zookeeper/pom.xml" />
+        <option value="$PROJECT_DIR$/wheel-registry/wheel-registry-common/pom.xml" />
+        <option value="$PROJECT_DIR$/wheel-config-common/pom.xml" />
+        <option value="$PROJECT_DIR$/wheel-registry/wheel-registry-factory/pom.xml" />
+        <option value="$PROJECT_DIR$/wheel-registry/wheel-registry-api/pom.xml" />
         <option value="$PROJECT_DIR$/wheel-remote/wheel-remote-netty/pom.xml" />
+        <option value="$PROJECT_DIR$/wheel-invoker/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -29,7 +29,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean, DisposableBean,
         ApplicationContextAware, BeanNameAware {
 
-    private final transient Wheel wheel;
+//    private final transient Wheel wheel;
 
     private AtomicBoolean exported = new AtomicBoolean();
 
@@ -56,9 +56,9 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     private RegistryService registryService;
 
 
-    public ServiceBean(){
-        this.wheel = null;
-    }
+//    public ServiceBean(){
+//        this.wheel = null;
+//    }
 
 
     @Override
@@ -90,16 +90,15 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
         ApplicationConfig applicationConfig = WheelBeanUtils.getApplicationConfig(applicationContext, ApplicationConfig.class);
         String ref = getRef();
         this.ref_replace = WheelBeanUtils.getRef(applicationContext,ref);
-        WheelExporter.exportService(serviceBean.getInterface(), interfaceConfig,ref_replace);
+        WheelExporter.exportService(this.clazzName, interfaceConfig,ref_replace);
         if("dubbo".equals(protocolConfig.getProtocol())){
             nettyServer = NettyManager.getNettyServer(protocolConfig.getPort());
         }else{
             throw new RuntimeException("unknown communicate protocol:" + protocolConfig.getProtocol());
         }
         // 判断什么类型的注册中心
-        registryService = RegistryManager.getRegistryService(registryConfig.getProtocol());
-        providerPath = "/wheel/"+applicationConfig.getName()+"/"+interfaceConfig.getGroup()+"/"+registryConfig.getHost()+":"+registryConfig.getPort()
-                +"/"+registryConfig.getPath()+"/"+serviceBean.getInterface()+"/"+serviceBean.getVersion();
+        registryService = RegistryManager.getRegistryService(this.ipAndPort);
+        providerPath = "/wheel/"+interfaceConfig.getGroup()+clazzName+"/providers";
         try {
             registryService.register(providerPath);
         } catch (Exception e) {
