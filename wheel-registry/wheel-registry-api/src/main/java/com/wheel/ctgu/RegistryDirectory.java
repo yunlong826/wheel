@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
- * 注册项目录，每个service的所有的dubboInvoker都保存到这里，实现zk listener，监听zk路径变化，当zk变化时，构造DubboInvoker。
+ * 注册项目录，每个service的所有的dubboInvoker都保存到这里，实现zk listener，监听zk路径变化，当zk变化时，构造WheelInvoker。
  * 同一个zk集群同一台机器应该只建立一个共享连接
  * @Author: jessin
  * @Date: 19-11-25 下午10:34
@@ -38,7 +38,7 @@ public class RegistryDirectory implements ChildListener {
         this.interfaceConfig = interfaceConfig;
         this.registryAddress = registry;
         // 监听group/接口名/providers，有变化时通知RegistryDirectory，也就是调用notify(url, listener, urls);
-        this.providerPath = "/wheel/"+interfaceConfig.getGroup()+ path + "/providers";
+        this.providerPath = "/wheel/"+interfaceConfig.getGroup()+path + "/providers";
 
         // 判断zk/redis。创建zk连接，并创建RegistryDirectory，第一次时创建DubboInvoker
         registryService = RegistryManager.getRegistryService(registryAddress);

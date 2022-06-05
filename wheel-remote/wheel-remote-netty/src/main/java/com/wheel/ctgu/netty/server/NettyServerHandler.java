@@ -30,7 +30,7 @@ public class NettyServerHandler extends ChannelDuplexHandler {
 
         @Override
         public Thread newThread(Runnable r) {
-            String threadName = "miniDubbo_server_biz_thread_" + id.incrementAndGet();
+            String threadName = "miniWheel_server_biz_thread_" + id.incrementAndGet();
             return new Thread(r, threadName);
         }
     });
@@ -109,7 +109,7 @@ public class NettyServerHandler extends ChannelDuplexHandler {
                     obj, method, response);
 
         } catch (Exception e) {
-            log.error("调用dubbo异常：{}", rpcInvocation, e);
+            log.error("调用Wheel异常：{}", rpcInvocation, e);
             response.setException(true);
             response.setResult(StringUtils.toString(e));
         }

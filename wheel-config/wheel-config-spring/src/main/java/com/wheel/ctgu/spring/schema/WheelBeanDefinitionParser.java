@@ -3,9 +3,7 @@ package com.wheel.ctgu.spring.schema;
 
 import com.wheel.ctgu.ApplicationConfig;
 import com.wheel.ctgu.ProtocolConfig;
-import com.wheel.ctgu.ReferenceConfig;
 import com.wheel.ctgu.RegistryConfig;
-import com.wheel.ctgu.common.config.InterfaceConfig;
 import com.wheel.ctgu.spring.ReferenceBean;
 import com.wheel.ctgu.spring.ServiceBean;
 import com.wheel.ctgu.spring.util.WheelBeanUtils;
@@ -57,6 +55,7 @@ public class WheelBeanDefinitionParser implements BeanDefinitionParser {
             genericBeanDefinition.getPropertyValues().add("retryCount",element.getAttribute("retryCount"));
             parserContext.getRegistry().registerBeanDefinition(beanClass.getName(),genericBeanDefinition);
         }else if(beanClass.equals(ReferenceBean.class)){
+            System.out.println(element.getAttribute("id"));
             genericBeanDefinition.getPropertyValues().add("id",element.getAttribute("id"));
             genericBeanDefinition.getPropertyValues().add("interface",element.getAttribute("interface"));
             genericBeanDefinition.getPropertyValues().add("version",element.getAttribute("version"));
@@ -65,41 +64,44 @@ public class WheelBeanDefinitionParser implements BeanDefinitionParser {
             genericBeanDefinition.getPropertyValues().add("failStrategy",element.getAttribute("failStrategy"));
             genericBeanDefinition.getPropertyValues().add("retryCount",element.getAttribute("retryCount"));
             parserContext.getRegistry().registerBeanDefinition(beanClass.getName(),genericBeanDefinition);
-            GenericBeanDefinition genericBeanDefinition1 =  new GenericBeanDefinition();
-            Object proxy = getProxy(element);
-            genericBeanDefinition1.setBeanClass(proxy.getClass());
-            genericBeanDefinition1.setLazyInit(false);
-            parserContext.getRegistry().registerBeanDefinition(element.getAttribute("id"),genericBeanDefinition1);
+//            getProxy(element);
+
+//            GenericBeanDefinition genericBeanDefinition1 =  new GenericBeanDefinition();
+//            getProxy(element);
+//            ReferenceFactoryBean referenceFactoryBean = new ReferenceFactoryBean(forName(element.getAttribute("interface")));
+//            genericBeanDefinition1.setBeanClass(referenceFactoryBean.getClass());
+//            genericBeanDefinition1.setLazyInit(false);
+//            parserContext.getRegistry().registerBeanDefinition(element.getAttribute("id"),genericBeanDefinition1);
         }else{
             throw new IllegalArgumentException("error<--------------->error");
         }
         return genericBeanDefinition;
     }
-    private Object getProxy(Element element){
-        Class anInterface = forName(element.getAttribute("interface"));
-        InterfaceConfig interfaceConfig = transForm(element);
-        if(WheelBeanUtils.ADDRESS.length() == 0){
-            throw new IllegalArgumentException("don't config the registryConfig");
-        }
-        ReferenceConfig referenceConfig = new ReferenceConfig(anInterface, interfaceConfig, new RegistryConfig(WheelBeanUtils.ADDRESS));
-        Object proxy = referenceConfig.getProxy();
-        return proxy;
-    }
-    private Class forName(String s){
-        try {
-            return Class.forName(s);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    private InterfaceConfig transForm(Element element){
-        InterfaceConfig interfaceConfig = new InterfaceConfig();
-        interfaceConfig.setVersion(element.getAttribute("version"));
-        interfaceConfig.setTimeout(element.getAttribute("timeout"));
-        interfaceConfig.setRetryCount(element.getAttribute("retryCount"));
-        interfaceConfig.setGroup(element.getAttribute("group"));
-        interfaceConfig.setFailStrategy(element.getAttribute("failStrategy"));
-        return interfaceConfig;
-    }
+//    private Object getProxy(Element element){
+//        Class anInterface = forName(element.getAttribute("interface"));
+//        InterfaceConfig interfaceConfig = transForm(element);
+//        if(WheelBeanUtils.ADDRESS.length() == 0){
+//            throw new IllegalArgumentException("don't config the registryConfig");
+//        }
+//        ReferenceConfig referenceConfig = new ReferenceConfig(anInterface, interfaceConfig, new RegistryConfig(WheelBeanUtils.ADDRESS));
+//        Object proxy = referenceConfig.getProxy();
+//        return proxy;
+//    }
+//    private Class forName(String s){
+//        try {
+//            return Class.forName(s);
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
+//    private InterfaceConfig transForm(Element element){
+//        InterfaceConfig interfaceConfig = new InterfaceConfig();
+//        interfaceConfig.setVersion(element.getAttribute("version"));
+//        interfaceConfig.setTimeout(element.getAttribute("timeout"));
+//        interfaceConfig.setRetryCount(element.getAttribute("retryCount"));
+//        interfaceConfig.setGroup(element.getAttribute("group"));
+//        interfaceConfig.setFailStrategy(element.getAttribute("failStrategy"));
+//        return interfaceConfig;
+//    }
 }

@@ -44,7 +44,7 @@ public class CuratorZookeeperClient {
     public CuratorZookeeperClient(String zkAddress) {
         try {
             // 设置zk临时节点的有效时间sessionTimeout，连接时间和会话超时时间是不一样的
-            int timeout = 40000;
+            int timeout = 3000;
             int retryTimeMillis = 1000;
             CuratorFrameworkFactory.Builder builder = CuratorFrameworkFactory.builder()
                     .connectString(zkAddress)

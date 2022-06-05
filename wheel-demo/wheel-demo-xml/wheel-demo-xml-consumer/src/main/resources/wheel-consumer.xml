@@ -7,7 +7,9 @@
         http://yunWheel.yun.com/schema/tag/wheel.xsd">
 
     <yun:application name="wheel-consumer"/>
-    <yun:registry address="zookeeper://81.68.177.58:2181"/>
+    <yun:registry address="zookeeper://127.0.0.1:2181"/>
 
-    <yun:reference id="demoService" interface="com.wheel.ctgu.DemoService" />
+    <bean id="WheelDemoXmlConsumerApplication" class="com.wheel.ctgu.WheelDemoXmlConsumerApplication"/>
+
+    <yun:reference id="demoService" interface="com.wheel.ctgu.DemoService" retryCount="3" timeout="3000" />
 </beans>

@@ -15,7 +15,7 @@ public class InterfaceConfig {
 
     private String version="";
 
-    private String timeout="0";
+    private String timeout="40000";
 
     private String failStrategy="";
 

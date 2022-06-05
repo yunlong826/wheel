@@ -1,5 +1,9 @@
 package com.wheel.ctgu.netty.client;
 
+import com.wheel.ctgu.JSONSimpleSerialization;
+import com.wheel.ctgu.JsonSerialization;
+import com.wheel.ctgu.api.RpcSerialization;
+
 /**
  * @Author: jessin
  * @Date: 2021/12/30 9:27 下午
@@ -27,4 +31,6 @@ public interface Constants {
     int HEARTBEAT_TIMEOUT_MILLIS = 3 * HEARTBEAT_INTERVAL_MILLIS;
 
     String LAST_READ_KEY = "lastReadTimestamp";
+
+    RpcSerialization SERIALIZER = new JsonSerialization();
 }

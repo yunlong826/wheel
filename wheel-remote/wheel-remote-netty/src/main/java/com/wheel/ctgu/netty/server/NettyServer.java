@@ -4,6 +4,7 @@ package com.wheel.ctgu.netty.server;
 import com.wheel.ctgu.netty.client.Constants;
 import com.wheel.ctgu.netty.codec.RpcDecoder;
 import com.wheel.ctgu.netty.codec.RpcEncoder;
+import com.wheel.ctgu.rpc.core.common.RpcResponse;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -15,6 +16,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
 import lombok.extern.slf4j.Slf4j;
 
+import java.net.InetSocketAddress;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -23,6 +25,11 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 public class NettyServer{
+
+
+
+
+
     // 底层会启动2*cpu个数的NioEventLoop，轮询注册到对应的NioEventLoop运行
     private EventLoopGroup boss = new NioEventLoopGroup();
     private EventLoopGroup worker = new NioEventLoopGroup();

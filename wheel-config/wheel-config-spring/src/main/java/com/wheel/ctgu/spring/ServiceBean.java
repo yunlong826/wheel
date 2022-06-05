@@ -10,6 +10,7 @@ import com.wheel.ctgu.common.exporter.WheelExporter;
 
 import com.wheel.ctgu.netty.NettyManager;
 import com.wheel.ctgu.netty.server.NettyServer;
+import com.wheel.ctgu.spring.util.NetUtils;
 import com.wheel.ctgu.spring.util.WheelBeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
@@ -98,7 +99,8 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
         }
         // 判断什么类型的注册中心
         registryService = RegistryManager.getRegistryService(this.ipAndPort);
-        providerPath = "/wheel/"+interfaceConfig.getGroup()+clazzName+"/providers";
+        providerPath = "/wheel/"+interfaceConfig.getGroup()+clazzName+"/providers"+"/"+ NetUtils.getServerIp() + ":"
+                +protocolConfig.getPort();
         try {
             registryService.register(providerPath);
         } catch (Exception e) {

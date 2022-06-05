@@ -4,6 +4,8 @@ import com.wheel.ctgu.netty.ConnectState;
 
 import com.wheel.ctgu.netty.codec.RpcDecoder;
 import com.wheel.ctgu.netty.codec.RpcEncoder;
+import com.wheel.ctgu.rpc.core.common.RpcRequest;
+import com.wheel.ctgu.rpc.core.common.RpcResponse;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -14,6 +16,7 @@ import io.netty.util.AttributeKey;
 import lombok.extern.slf4j.Slf4j;
 
 
+import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -26,6 +29,14 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 public class NettyClient{
+
+
+
+
+
+
+
+
     private String ipAndPort;
     /**
      * worker可以共用
@@ -89,7 +100,7 @@ public class NettyClient{
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline()
-                                    .addLast(new RpcEncoder<>())
+                                    .addLast(new RpcEncoder())
                                     .addLast(new RpcDecoder())
                                     // 空闲触发器，超过心跳时间没有发送或收到数据时，发送心跳
                                     .addLast(new IdleStateHandler(0, 0, Constants.HEARTBEAT_INTERVAL_MILLIS, TimeUnit.MILLISECONDS))
@@ -99,7 +110,7 @@ public class NettyClient{
             // 客户端是connect
             String[] values = ipAndPort.split(":");
             //  底层转换为pipeline.connect()
-            ChannelFuture channelFuture = bootstrap.connect(values[0], Integer.parseInt(values[1])).sync();
+            ChannelFuture channelFuture = bootstrap.connect(new InetSocketAddress(values[0], Integer.parseInt(values[1]))).sync();
             if (channelFuture.isSuccess()) {
                 state = ConnectState.CONNECTED;
                 log.info("与服务端建立连接成功：{}", ipAndPort);
